@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module game</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">game</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cversc%5Ctestgithub%5Cportfolio%5Cknight%27s_tour_puzzle%5Cgame.py">c:\users\versc\testgithub\portfolio\knight's_tour_puzzle\game.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="game.html#Game">Game</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Game">class <strong>Game</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Game">Game</a>(row_pos,&nbsp;col_pos,&nbsp;row_n,&nbsp;col_n,&nbsp;ai)<br>
+&nbsp;<br>
+#&nbsp;Class&nbsp;definition&nbsp;for&nbsp;<a href="#Game">Game</a><br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Game-__init__"><strong>__init__</strong></a>(self, row_pos, col_pos, row_n, col_n, ai)</dt><dd><span class="code">Initializes&nbsp;a&nbsp;<a href="#Game">Game</a>&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row_pos&nbsp;(int):&nbsp;The&nbsp;starting&nbsp;row&nbsp;position&nbsp;of&nbsp;the&nbsp;knight.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col_pos&nbsp;(int):&nbsp;The&nbsp;starting&nbsp;column&nbsp;position&nbsp;of&nbsp;the&nbsp;knight.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row_n&nbsp;(int):&nbsp;The&nbsp;dimension&nbsp;of&nbsp;the&nbsp;board&nbsp;(number&nbsp;of&nbsp;rows).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col_n&nbsp;(int):&nbsp;The&nbsp;dimension&nbsp;of&nbsp;the&nbsp;board&nbsp;(number&nbsp;of&nbsp;columns).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ai&nbsp;(bool):&nbsp;True&nbsp;if&nbsp;the&nbsp;game&nbsp;is&nbsp;played&nbsp;by&nbsp;AI,&nbsp;False&nbsp;if&nbsp;played&nbsp;manually.</span></dd></dl>
+
+<dl><dt><a name="Game-check_one_move"><strong>check_one_move</strong></a>(self, new_row_pos, new_col_pos)</dt><dd><span class="code">Checks&nbsp;if&nbsp;a&nbsp;move&nbsp;to&nbsp;the&nbsp;specified&nbsp;position&nbsp;is&nbsp;possible.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new_row_pos&nbsp;(int):&nbsp;The&nbsp;row&nbsp;position&nbsp;to&nbsp;check.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new_col_pos&nbsp;(int):&nbsp;The&nbsp;column&nbsp;position&nbsp;to&nbsp;check.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int:&nbsp;1&nbsp;if&nbsp;the&nbsp;move&nbsp;is&nbsp;possible,&nbsp;0&nbsp;otherwise.</span></dd></dl>
+
+<dl><dt><a name="Game-input_position"><strong>input_position</strong></a>(self, sign, row_pos, col_pos)</dt><dd><span class="code">Updates&nbsp;the&nbsp;game&nbsp;board&nbsp;with&nbsp;the&nbsp;specified&nbsp;sign&nbsp;at&nbsp;the&nbsp;given&nbsp;position.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sign&nbsp;(str):&nbsp;The&nbsp;sign&nbsp;to&nbsp;be&nbsp;placed&nbsp;on&nbsp;the&nbsp;board.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row_pos&nbsp;(int):&nbsp;The&nbsp;row&nbsp;position.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col_pos&nbsp;(int):&nbsp;The&nbsp;column&nbsp;position.</span></dd></dl>
+
+<dl><dt><a name="Game-possible_moves"><strong>possible_moves</strong></a>(self, rec, row_pos, col_pos)</dt><dd><span class="code">Finds&nbsp;the&nbsp;possible&nbsp;moves&nbsp;from&nbsp;a&nbsp;given&nbsp;position&nbsp;on&nbsp;the&nbsp;board.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rec&nbsp;(int):&nbsp;The&nbsp;recursion&nbsp;depth.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row_pos&nbsp;(int):&nbsp;The&nbsp;row&nbsp;position.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col_pos&nbsp;(int):&nbsp;The&nbsp;column&nbsp;position.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple:&nbsp;A&nbsp;tuple&nbsp;containing&nbsp;the&nbsp;number&nbsp;of&nbsp;possible&nbsp;moves,&nbsp;a&nbsp;list&nbsp;of&nbsp;possible&nbsp;moves,&nbsp;and&nbsp;a&nbsp;list&nbsp;of&nbsp;counts&nbsp;of&nbsp;moves&nbsp;possible&nbsp;from&nbsp;each&nbsp;position.</span></dd></dl>
+
+<dl><dt><a name="Game-view_board"><strong>view_board</strong></a>(self)</dt><dd><span class="code">Returns&nbsp;a&nbsp;formatted&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;game&nbsp;board.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-finish_ai"><strong>finish_ai</strong></a>(game, row_pos, col_pos, current_value)</dt><dd><span class="code">Recursively&nbsp;tries&nbsp;to&nbsp;finish&nbsp;the&nbsp;game&nbsp;using&nbsp;AI.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;The&nbsp;<a href="#Game">Game</a>&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row_pos&nbsp;(int):&nbsp;The&nbsp;current&nbsp;row&nbsp;position.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col_pos&nbsp;(int):&nbsp;The&nbsp;current&nbsp;column&nbsp;position.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;current_value&nbsp;(int):&nbsp;The&nbsp;current&nbsp;value&nbsp;of&nbsp;the&nbsp;knight's&nbsp;position.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;the&nbsp;game&nbsp;is&nbsp;finished,&nbsp;False&nbsp;otherwise.</span></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><span class="code">The&nbsp;main&nbsp;function&nbsp;to&nbsp;start&nbsp;the&nbsp;game.</span></dd></dl>
+ <dl><dt><a name="-play_ai"><strong>play_ai</strong></a>(game)</dt><dd><span class="code">Plays&nbsp;the&nbsp;game&nbsp;automatically&nbsp;using&nbsp;AI&nbsp;to&nbsp;find&nbsp;a&nbsp;solution.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;The&nbsp;<a href="#Game">Game</a>&nbsp;<a href="builtins.html#object">object</a>.</span></dd></dl>
+ <dl><dt><a name="-play_game"><strong>play_game</strong></a>(game)</dt><dd><span class="code">Plays&nbsp;the&nbsp;game&nbsp;manually&nbsp;with&nbsp;the&nbsp;user&nbsp;making&nbsp;moves.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;game&nbsp;(<a href="#Game">Game</a>):&nbsp;The&nbsp;<a href="#Game">Game</a>&nbsp;<a href="builtins.html#object">object</a>.</span></dd></dl>
+ <dl><dt><a name="-solution_exists"><strong>solution_exists</strong></a>(row_n, col_n)</dt><dd><span class="code">Checks&nbsp;if&nbsp;a&nbsp;solution&nbsp;exists&nbsp;for&nbsp;the&nbsp;given&nbsp;board&nbsp;dimensions.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;row_n&nbsp;(int):&nbsp;The&nbsp;number&nbsp;of&nbsp;rows&nbsp;on&nbsp;the&nbsp;board.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col_n&nbsp;(int):&nbsp;The&nbsp;number&nbsp;of&nbsp;columns&nbsp;on&nbsp;the&nbsp;board.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;a&nbsp;solution&nbsp;exists,&nbsp;False&nbsp;otherwise.</span></dd></dl>
+ <dl><dt><a name="-starting_messages"><strong>starting_messages</strong></a>()</dt><dd><span class="code">Prompts&nbsp;the&nbsp;user&nbsp;for&nbsp;board&nbsp;dimensions,&nbsp;knight's&nbsp;starting&nbsp;position,&nbsp;and&nbsp;choice&nbsp;to&nbsp;try&nbsp;the&nbsp;puzzle.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple:&nbsp;A&nbsp;tuple&nbsp;containing&nbsp;the&nbsp;row&nbsp;position,&nbsp;column&nbsp;position,&nbsp;row&nbsp;dimension,&nbsp;column&nbsp;dimension,&nbsp;and&nbsp;puzzle&nbsp;choice.</span></dd></dl>
+ <dl><dt><a name="-valid_position"><strong>valid_position</strong></a>(x)</dt><dd><span class="code">Validates&nbsp;and&nbsp;splits&nbsp;input&nbsp;string&nbsp;into&nbsp;two&nbsp;integers.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(str):&nbsp;The&nbsp;input&nbsp;string.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;containing&nbsp;two&nbsp;integers&nbsp;if&nbsp;the&nbsp;input&nbsp;is&nbsp;valid,&nbsp;otherwise&nbsp;0.</span></dd></dl>
+</td></tr></table>
+</body></html>
