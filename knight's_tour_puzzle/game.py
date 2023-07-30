@@ -176,7 +176,7 @@ class Game:
                     future_possible_moves_n, _, _ = self.possible_moves(rec - 1, row_pos + row, col_pos + col)
                     possible_moves_table_n.append(future_possible_moves_n)
         if rec > 0:
-            sorted_pairs = sorted(zip(possible_moves_table_n, possible_moves_table), reverse=True)
+            sorted_pairs = sorted(zip(possible_moves_table_n, possible_moves_table)) # reverse=True
             possible_moves_table_n = [pair[0] for pair in sorted_pairs]
             possible_moves_table = [pair[1] for pair in sorted_pairs]
 
